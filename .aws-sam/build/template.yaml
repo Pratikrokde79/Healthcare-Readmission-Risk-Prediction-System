@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Patient Readmission Predictor (Free Tier Safe)
+Parameters:
+  ModelBucket:
+    Type: String
+    Description: S3 bucket containing model/model_params.json
+Globals:
+  Function:
+    Timeout: 15
+    Runtime: python3.12
+    MemorySize: 128
+Resources:
+  PredictorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: patient-predictor-demo
+      Handler: app.lambda_handler
+      CodeUri: PredictorFunction
+      Environment:
+        Variables:
+          MODEL_S3_BUCKET:
+            Ref: ModelBucket
+          MODEL_S3_KEY: model/model_params.json
+      Policies:
+      - Statement:
+        - Effect: Allow
+          Action:
+          - s3:GetObject
+          Resource:
+            Fn::Sub: arn:aws:s3:::${ModelBucket}/*
+      Events:
+        ApiRequest:
+          Type: Api
+          Properties:
+            Path: /predict
+            Method: post
+    Metadata:
+      SamResourceId: PredictorFunction
+Outputs:
+  ApiUrl:
+    Description: Invoke URL
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/predict

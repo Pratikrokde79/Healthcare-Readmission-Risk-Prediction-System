@@ -1,0 +1,137 @@
+{
+    "StackEvents": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "6a894140-c834-11f0-87ac-0605ce2357a7",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "patient-predict-system",
+            "PhysicalResourceId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2025-11-23T06:19:49.947000+00:00",
+            "ResourceStatus": "ROLLBACK_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunctionRole-DELETE_COMPLETE-2025-11-23T06:19:49.647Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunctionRole",
+            "PhysicalResourceId": "patient-predict-system-PredictorFunctionRole-01L9xqsvMIrH",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2025-11-23T06:19:49.647000+00:00",
+            "ResourceStatus": "DELETE_COMPLETE",
+            "ResourceProperties": "{\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole\"],\"Policies\":[{\"PolicyName\":\"PredictorFunctionRolePolicy0\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:GetObject\"],\"Resource\":\"arn:aws:s3:::pr-patient-model-pratik-demo/*\",\"Effect\":\"Allow\"}]}}],\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"lambda.amazonaws.com\"]}}]},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunctionRole-DELETE_IN_PROGRESS-2025-11-23T06:19:36.166Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunctionRole",
+            "PhysicalResourceId": "patient-predict-system-PredictorFunctionRole-01L9xqsvMIrH",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2025-11-23T06:19:36.166000+00:00",
+            "ResourceStatus": "DELETE_IN_PROGRESS",
+            "ResourceProperties": "{\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole\"],\"Policies\":[{\"PolicyName\":\"PredictorFunctionRolePolicy0\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:GetObject\"],\"Resource\":\"arn:aws:s3:::pr-patient-model-pratik-demo/*\",\"Effect\":\"Allow\"}]}}],\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"lambda.amazonaws.com\"]}}]},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunction-DELETE_COMPLETE-2025-11-23T06:19:35.843Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunction",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::Lambda::Function",
+            "Timestamp": "2025-11-23T06:19:35.843000+00:00",
+            "ResourceStatus": "DELETE_COMPLETE",
+            "ResourceProperties": "{\"Role\":\"arn:aws:iam::438465145440:role/patient-predict-system-PredictorFunctionRole-01L9xqsvMIrH\",\"FunctionName\":\"patient-readmit-predictor\",\"MemorySize\":\"128\",\"Runtime\":\"python3.12\",\"Timeout\":\"15\",\"Handler\":\"app.lambda_handler\",\"Environment\":{\"Variables\":{\"MODEL_S3_KEY\":\"model/model_params.json\",\"MODEL_S3_BUCKET\":\"pr-patient-model-pratik-demo\"}},\"Code\":{\"S3Bucket\":\"aws-sam-cli-managed-default-samclisourcebucket-l7bqwicqhdsc\",\"S3Key\":\"patient-predict-system/6584647d99d939bbfc3583c7e715b725\"},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "61181c30-c834-11f0-a860-0a54ecfa4b2b",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "patient-predict-system",
+            "PhysicalResourceId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2025-11-23T06:19:34.105000+00:00",
+            "ResourceStatus": "ROLLBACK_IN_PROGRESS",
+            "ResourceStatusReason": "The following resource(s) failed to create: [PredictorFunction]. Rollback requested by user."
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunction-CREATE_FAILED-2025-11-23T06:19:33.830Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunction",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::Lambda::Function",
+            "Timestamp": "2025-11-23T06:19:33.830000+00:00",
+            "ResourceStatus": "CREATE_FAILED",
+            "ResourceStatusReason": "patient-readmit-predictor already exists in stack arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-readmit-stack/8be7fc50-c4b0-11f0-a195-06511a5fa5e5",
+            "ResourceProperties": "{\"Role\":\"arn:aws:iam::438465145440:role/patient-predict-system-PredictorFunctionRole-01L9xqsvMIrH\",\"FunctionName\":\"patient-readmit-predictor\",\"MemorySize\":\"128\",\"Runtime\":\"python3.12\",\"Timeout\":\"15\",\"Handler\":\"app.lambda_handler\",\"Environment\":{\"Variables\":{\"MODEL_S3_KEY\":\"model/model_params.json\",\"MODEL_S3_BUCKET\":\"pr-patient-model-pratik-demo\"}},\"Code\":{\"S3Bucket\":\"aws-sam-cli-managed-default-samclisourcebucket-l7bqwicqhdsc\",\"S3Key\":\"patient-predict-system/6584647d99d939bbfc3583c7e715b725\"},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunction-CREATE_IN_PROGRESS-2025-11-23T06:19:33.505Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunction",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::Lambda::Function",
+            "Timestamp": "2025-11-23T06:19:33.505000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceProperties": "{\"Role\":\"arn:aws:iam::438465145440:role/patient-predict-system-PredictorFunctionRole-01L9xqsvMIrH\",\"FunctionName\":\"patient-readmit-predictor\",\"MemorySize\":\"128\",\"Runtime\":\"python3.12\",\"Timeout\":\"15\",\"Handler\":\"app.lambda_handler\",\"Environment\":{\"Variables\":{\"MODEL_S3_KEY\":\"model/model_params.json\",\"MODEL_S3_BUCKET\":\"pr-patient-model-pratik-demo\"}},\"Code\":{\"S3Bucket\":\"aws-sam-cli-managed-default-samclisourcebucket-l7bqwicqhdsc\",\"S3Key\":\"patient-predict-system/6584647d99d939bbfc3583c7e715b725\"},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunctionRole-CREATE_COMPLETE-2025-11-23T06:19:32.054Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunctionRole",
+            "PhysicalResourceId": "patient-predict-system-PredictorFunctionRole-01L9xqsvMIrH",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2025-11-23T06:19:32.054000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "ResourceProperties": "{\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole\"],\"Policies\":[{\"PolicyName\":\"PredictorFunctionRolePolicy0\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:GetObject\"],\"Resource\":\"arn:aws:s3:::pr-patient-model-pratik-demo/*\",\"Effect\":\"Allow\"}]}}],\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"lambda.amazonaws.com\"]}}]},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunctionRole-CREATE_IN_PROGRESS-2025-11-23T06:19:14.977Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunctionRole",
+            "PhysicalResourceId": "patient-predict-system-PredictorFunctionRole-01L9xqsvMIrH",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2025-11-23T06:19:14.977000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "Resource creation Initiated",
+            "ResourceProperties": "{\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole\"],\"Policies\":[{\"PolicyName\":\"PredictorFunctionRolePolicy0\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:GetObject\"],\"Resource\":\"arn:aws:s3:::pr-patient-model-pratik-demo/*\",\"Effect\":\"Allow\"}]}}],\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"lambda.amazonaws.com\"]}}]},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "PredictorFunctionRole-CREATE_IN_PROGRESS-2025-11-23T06:19:13.542Z",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "PredictorFunctionRole",
+            "PhysicalResourceId": "",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2025-11-23T06:19:13.542000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceProperties": "{\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole\"],\"Policies\":[{\"PolicyName\":\"PredictorFunctionRolePolicy0\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:GetObject\"],\"Resource\":\"arn:aws:s3:::pr-patient-model-pratik-demo/*\",\"Effect\":\"Allow\"}]}}],\"AssumeRolePolicyDocument\":{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"lambda.amazonaws.com\"]}}]},\"Tags\":[{\"Value\":\"SAM\",\"Key\":\"lambda:createdBy\"}]}"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "53a45aa0-c834-11f0-b4ac-0a55a62d4a8b",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "patient-predict-system",
+            "PhysicalResourceId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2025-11-23T06:19:11.547000+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS",
+            "ResourceStatusReason": "User Initiated"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "EventId": "4d3b4570-c834-11f0-bd42-02530479a341",
+            "StackName": "patient-predict-system",
+            "LogicalResourceId": "patient-predict-system",
+            "PhysicalResourceId": "arn:aws:cloudformation:ap-south-1:438465145440:stack/patient-predict-system/4d3bbaa0-c834-11f0-bd42-02530479a341",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2025-11-23T06:19:00.884000+00:00",
+            "ResourceStatus": "REVIEW_IN_PROGRESS",
+            "ResourceStatusReason": "User Initiated"
+        }
+    ]
+}
